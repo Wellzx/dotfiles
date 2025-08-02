@@ -1,0 +1,7 @@
+[
+  { "label": "lock",    "action": "hyprlock",                  "text": "Bloquear" },
+  { "label": "suspend", "action": "systemctl suspend",         "text": "Suspender" },
+  { "label": "shutdown","action": "systemctl poweroff",        "text": "Desligar" },
+  { "label": "reboot",  "action": "systemctl reboot",          "text": "Reiniciar" },
+  { "label": "logout",  "action": "hyprctl dispatch exit 0",   "text": "Sair" }
+]

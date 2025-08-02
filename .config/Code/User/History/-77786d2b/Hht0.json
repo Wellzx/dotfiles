@@ -1,0 +1,29 @@
+{
+    "editor.fontFamily": "JetBrainsMono Nerd Font, monospace",
+    "workbench.iconTheme": "symbols",
+    
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.4,
+    "editor.letterSpacing": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.renderLineHighlight": "none",
+    "editor.fontLigatures": true,
+    "workbench.editor.labelFormat": "short",
+    "explorer.compactFolders": false,
+    "editor.semanticHighlighting.enabled": false,
+    "breadcrumbs.enabled": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.statusBar.visible": false,
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "security.workspace.trust.banner": "never",
+    "window.commandCenter": false,
+    "chat.commandCenter.enabled": false,
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
+    "window.menuBarVisibility": "compact"
+
+}

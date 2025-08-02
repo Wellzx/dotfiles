@@ -1,0 +1,27 @@
+* {
+    foreground: rgba(200, 200, 200, 1);             /* cinza claro */
+    background: rgba(0, 0, 0, 0);
+    normal-foreground: @foreground;
+    normal-background: rgba(0, 0, 0, 0);
+
+    selected-normal-foreground: rgba(220, 220, 220, 1);  /* texto na seleção */
+    selected-normal-background: rgba(70, 70, 70, 0.7);   /* fundo seleção escuro e translúcido */
+
+    active-foreground: @foreground;
+    active-background: rgba(80, 80, 80, 0.5);
+
+    urgent-foreground: rgba(255, 100, 100, 1);
+    urgent-background: rgba(100, 30, 30, 0.8);
+
+    border-color: rgba(100, 100, 100, 0.5);
+    separatorcolor: rgba(100, 100, 100, 0.3);
+
+    bordercolor: @border-color;
+
+    spacing: 2;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}

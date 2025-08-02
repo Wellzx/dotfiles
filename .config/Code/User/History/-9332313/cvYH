@@ -1,0 +1,9 @@
+font = JetBrainsMono Nerd Font 12
+background-color = #00000080
+border-color = #88c0d0
+text-color = #ffffff
+width = 50%
+padding-left = 1000
+padding-top = 1000
+border-width = 200
+outline-width = 0

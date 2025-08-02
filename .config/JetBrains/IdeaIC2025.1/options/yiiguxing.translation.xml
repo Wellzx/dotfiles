@@ -1,0 +1,26 @@
+<application>
+  <component name="Translation.Cache">
+    <option name="lastTrimTime" value="1753460770883" />
+  </component>
+  <component name="Translation.States">
+    <option name="translationDialogHeight" value="260" />
+    <option name="translationDialogLocationX" value="747" />
+    <option name="translationDialogLocationY" value="670" />
+    <histories>
+      <item value="criteria" />
+      <item value="non" />
+      <item value="static" />
+      <item value="expressao lambda declarada" />
+      <item value="declared" />
+      <item value="Reference method with static method" />
+      <item value="implementação da interface" />
+      <item value="implementação" />
+    </histories>
+    <option name="languageScores">
+      <map>
+        <entry key="ENGLISH" value="9" />
+        <entry key="PORTUGUESE" value="10" />
+      </map>
+    </option>
+  </component>
+</application>

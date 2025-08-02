@@ -1,0 +1,140 @@
+11:48:31.625: Platform: Wayland
+11:48:31.625: CPU Name: AMD Ryzen 7 5700X 8-Core Processor
+11:48:31.625: CPU Speed: 3285.822MHz
+11:48:31.625: Physical Cores: 8, Logical Cores: 16
+11:48:31.625: Physical Memory: 15869MB Total, 5354MB Free
+11:48:31.625: Kernel Version: Linux 6.15.8-arch1-1
+11:48:31.625: Distribution: "Arch Linux" Unknown
+11:48:31.625: Desktop Environment: Hyprland (Hyprland)
+11:48:31.625: Session Type: wayland
+11:48:31.626: Qt Version: 6.9.1 (runtime), 6.9.1 (compiled)
+11:48:31.626: Portable mode: false
+11:48:31.643: OBS 31.0.4 (linux)
+11:48:31.643: ---------------------------------
+11:48:31.644: ---------------------------------
+11:48:31.644: audio settings reset:
+11:48:31.644: 	samples per sec: 48000
+11:48:31.644: 	speakers:        2
+11:48:31.644: 	max buffering:   960 milliseconds
+11:48:31.644: 	buffering type:  dynamically increasing
+11:48:31.645: ---------------------------------
+11:48:31.645: Initializing OpenGL...
+11:48:31.645: Using EGL/Wayland
+11:48:31.704: Initialized EGL 1.5
+11:48:31.780: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1650/PCIe/SSE2
+11:48:31.780: OpenGL loaded successfully, version 3.3.0 NVIDIA 575.64.05, shading language 3.30 NVIDIA via Cg compiler
+11:48:31.798: ---------------------------------
+11:48:31.799: video settings reset:
+11:48:31.799: 	base resolution:   1920x1080
+11:48:31.799: 	output resolution: 1920x1080
+11:48:31.799: 	downscale filter:  Bicubic
+11:48:31.799: 	fps:               60/1
+11:48:31.799: 	format:            NV12
+11:48:31.799: 	YUV mode:          Rec. 709/Partial
+11:48:31.799: NV12 texture support enabled
+11:48:31.799: P010 texture support not available
+11:48:31.834: Audio monitoring device:
+11:48:31.834: 	name: Padrão
+11:48:31.834: 	id: default
+11:48:31.834: ---------------------------------
+11:48:31.842: Failed to load 'en-US' text for module: 'decklink-captions.so'
+11:48:31.848: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+11:48:31.854: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+11:48:31.854: Failed to initialize module 'decklink.so'
+11:48:31.951: [pipewire] Available capture sources:
+11:48:31.951: [pipewire]     - Monitor source
+11:48:31.951: [pipewire]     - Window source
+11:48:31.966: v4l2loopback not installed, virtual camera not registered
+11:48:32.002: LIBVA_DRIVER_NAME variable is set, this could prevent FFmpeg VAAPI from working correctly
+11:48:32.269: VAAPI: API version 1.22
+11:48:32.344: FFmpeg VAAPI H264 encoding supported
+11:48:32.610: FFmpeg VAAPI AV1 encoding supported
+11:48:32.878: FFmpeg VAAPI HEVC encoding supported
+11:48:33.344: [obs-nvenc] NVENC version: 13.0 (compiled) / 13.0 (driver), CUDA driver version: 12.90, AV1 supported: false
+11:48:34.187: os_dlopen(/usr/lib/obs-plugins/obs-websocket.so->/usr/lib/obs-plugins/obs-websocket.so): libqrcodegencpp.so.1: não é possível abrir arquivo compartilhado: Arquivo ou diretório inexistente
+11:48:34.187: 
+11:48:34.190: os_dlopen(/usr/lib/obs-plugins/obs-websocket.so->/usr/lib/obs-plugins/obs-websocket.so): libqrcodegencpp.so.1: não é possível abrir arquivo compartilhado: Arquivo ou diretório inexistente
+11:48:34.190: 
+11:48:34.190: Module '/usr/lib/obs-plugins/obs-websocket.so' not loaded
+11:48:34.210: ---------------------------------
+11:48:34.210:   Loaded Modules:
+11:48:34.210:     text-freetype2.so
+11:48:34.210:     rtmp-services.so
+11:48:34.210:     obs-x264.so
+11:48:34.210:     obs-webrtc.so
+11:48:34.210:     obs-vst.so
+11:48:34.210:     obs-transitions.so
+11:48:34.210:     obs-qsv11.so
+11:48:34.210:     obs-outputs.so
+11:48:34.210:     obs-nvenc.so
+11:48:34.210:     obs-libfdk.so
+11:48:34.210:     obs-filters.so
+11:48:34.210:     obs-ffmpeg.so
+11:48:34.210:     linux-v4l2.so
+11:48:34.210:     linux-pulseaudio.so
+11:48:34.210:     linux-pipewire.so
+11:48:34.210:     linux-jack.so
+11:48:34.210:     linux-capture.so
+11:48:34.210:     linux-alsa.so
+11:48:34.210:     image-source.so
+11:48:34.210:     frontend-tools.so
+11:48:34.210:     decklink-output-ui.so
+11:48:34.210:     decklink-captions.so
+11:48:34.210: ---------------------------------
+11:48:34.210: ---------------------------------
+11:48:34.210: Available Encoders:
+11:48:34.210:   Video Encoders:
+11:48:34.210: 	- ffmpeg_svt_av1 (SVT-AV1)
+11:48:34.210: 	- ffmpeg_aom_av1 (AOM AV1)
+11:48:34.210: 	- ffmpeg_vaapi_tex (FFmpeg VAAPI H.264)
+11:48:34.210: 	- av1_ffmpeg_vaapi_tex (FFmpeg VAAPI AV1)
+11:48:34.210: 	- hevc_ffmpeg_vaapi_tex (FFmpeg VAAPI HEVC)
+11:48:34.210: 	- obs_nvenc_h264_tex (NVIDIA NVENC H.264)
+11:48:34.210: 	- obs_nvenc_hevc_tex (NVIDIA NVENC HEVC)
+11:48:34.210: 	- obs_x264 (x264)
+11:48:34.210:   Audio Encoders:
+11:48:34.210: 	- ffmpeg_aac (FFmpeg AAC)
+11:48:34.210: 	- ffmpeg_opus (FFmpeg Opus)
+11:48:34.210: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+11:48:34.210: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+11:48:34.210: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+11:48:34.210: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+11:48:34.210: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+11:48:34.210: 	- libfdk_aac (libfdk AAC)
+11:48:34.210: ==== Startup complete ===============================================
+11:48:34.248: All scene data cleared
+11:48:34.248: ------------------------------------------------
+11:48:34.251: pulse-input: Server name: 'PulseAudio (on PipeWire 1.4.7) 15.0.0'
+11:48:34.251: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+11:48:34.251: pulse-input: Started recording from 'alsa_output.pci-0000_08_00.4.analog-stereo.monitor' (default)
+11:48:34.251: [Loaded global audio device]: 'Áudio do desktop'
+11:48:34.252: pulse-input: Server name: 'PulseAudio (on PipeWire 1.4.7) 15.0.0'
+11:48:34.252: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+11:48:34.252: pulse-input: Started recording from 'alsa_input.pci-0000_08_00.4.analog-stereo' (default)
+11:48:34.252: [Loaded global audio device]: 'Mic/Aux'
+11:48:34.253: Switched to scene 'Cena'
+11:48:34.253: ------------------------------------------------
+11:48:34.253: Loaded scenes:
+11:48:34.253: - scene 'Cena':
+11:48:34.253: ------------------------------------------------
+11:48:34.802: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Áudio do desktop)
+11:48:34.802: 
+11:49:07.265: Settings changed (audio)
+11:49:07.265: ------------------------------------------------
+11:49:24.551: Settings changed (outputs)
+11:49:24.551: ------------------------------------------------
+11:49:55.003: Settings changed (outputs)
+11:49:55.003: ------------------------------------------------
+11:51:13.867: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x55a29ed19880 with focusing surface 0x55a2a3365c20
+11:51:14.596: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x55a2a2cba7e0 with focusing surface 0x55a2a3365c20
+11:51:16.022: User added filter 'Ganho' (gain_filter) to source 'Mic/Aux'
+11:51:19.589: virtual void QtWaylandClient::QWaylandTextInputv3::enableSurface(wl_surface*) Try to enable surface 0x55a2a151ef30 with focusing surface 0x55a2a2cba7e0
+11:51:19.728: virtual void QtWaylandClient::QWaylandTextInputv3::enableSurface(wl_surface*) Try to enable surface 0x55a2a2cba7e0 with focusing surface 0x55a2a151ef30
+11:51:20.084: virtual void QtWaylandClient::QWaylandTextInputv3::enableSurface(wl_surface*) Try to enable surface 0x55a2a151ef30 with focusing surface 0x55a2a2cba7e0
+11:51:20.620: User added filter 'Filtro de ruídos' (noise_gate_filter) to source 'Mic/Aux'
+11:51:38.016: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x55a2a297c000 with focusing surface 0x55a2a2cba7e0
+11:51:44.298: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x55a29ed19880 with focusing surface 0x55a2a2cba7e0
+11:51:44.875: virtual void QtWaylandClient::QWaylandTextInputv3::enableSurface(wl_surface*) Try to enable surface 0x55a2a1b25830 with focusing surface 0x55a2a2cba7e0
+11:51:45.454: User added filter 'Supressão de ruídos' (noise_suppress_filter_v2) to source 'Mic/Aux'
+11:51:46.518: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x55a29ed19880 with focusing surface 0x55a2a2cba7e0
+11:51:47.914: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x55a29ed19880 with focusing surface 0x55a2a2cba7e0

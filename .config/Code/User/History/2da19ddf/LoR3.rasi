@@ -1,0 +1,102 @@
+* {
+    foreground: rgba(220, 220, 220, 1);  /* Cor padrão do texto */
+    background: rgba(0, 0, 0, 0.0);      /* Totalmente transparente */
+    normal-foreground: @foreground;
+    normal-background: rgba(0, 0, 0, 0.0);
+
+    selected-normal-foreground: rgba(255, 255, 255, 1);  /* texto selecionado */
+    selected-normal-background: rgba(255, 255, 255, 0.05); /* fundo leve ao selecionar */
+
+    active-foreground: @foreground;
+    active-background: rgba(255, 255, 255, 0.03); /* quase nada */
+
+    urgent-foreground: rgba(255, 100, 100, 1);
+    urgent-background: rgba(255, 0, 0, 0.05);
+
+    border-color: rgba(255, 255, 255, 0.1);
+    separatorcolor: rgba(255, 255, 255, 0.05);
+
+    bordercolor: @border-color;
+
+    spacing: 2;
+}
+
+window {
+    background-color: @background;
+    border: 0;
+    padding: 10;
+    border-radius: 10px;
+}
+
+mainbox, message, textbox {
+    border: 0;
+    padding: 0;
+    text-color: @foreground;
+}
+
+listview {
+    fixed-height: 0;
+    border: 0;
+    spacing: 3px;
+    padding: 0;
+    border-radius: 8px;
+    scrollbar: false;
+}
+
+element {
+    border: 0;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+element.selected.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+element.selected.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+scrollbar {
+    width: 0;
+    handle-width: 0;
+}
+
+inputbar, case-indicator, entry, prompt, textbox-prompt-colon {
+    spacing: 0;
+    text-color: @foreground;
+    padding: 2px;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+    border-radius: 6px;
+}

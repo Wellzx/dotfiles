@@ -1,0 +1,19 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="ProjectViewState">
+        <option name="showLibraryContents" value="true" />
+      </component>
+      <component name="WindowStateProjectService">
+        <state x="748" y="337" key="FileChooserDialogImpl" timestamp="1752949852135">
+          <screen x="0" y="0" width="1920" height="1080" />
+        </state>
+        <state x="748" y="337" key="FileChooserDialogImpl/0.0.1920.1080" timestamp="1752949852135" />
+        <state x="560" y="258" width="800" height="613" key="new project wizard" timestamp="1752950920237">
+          <screen x="0" y="0" width="1920" height="1080" />
+        </state>
+        <state x="560" y="258" width="800" height="613" key="new project wizard/0.0.1920.1080" timestamp="1752950920237" />
+      </component>
+    </defaultProject>
+  </component>
+</application>

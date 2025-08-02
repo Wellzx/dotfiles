@@ -1,0 +1,11 @@
+[Default Applications]
+application/x-zerosize=userapp-code-GU9O92.desktop
+text/plain=code.desktop
+inode/directory=org.kde.dolphin.desktop
+
+[Added Associations]
+application/x-zerosize=userapp-code-GU9O92.desktop;
+text/plain=code.desktop;
+application/schema+json=code.desktop;
+image/png=firefox.desktop;
+application/x-shellscript=code.desktop;
