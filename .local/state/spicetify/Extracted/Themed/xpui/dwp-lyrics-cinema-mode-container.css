@@ -1,0 +1,9 @@
+__workaround_element__{--__workaround_property__:0}@-webkit-keyframes shimmer{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}@keyframes shimmer{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter,
+ Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ *//*!
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=35378cd201a131f69c68a64bc4438544)
+ * Config saved to config.json and https://gist.github.com/35378cd201a131f69c68a64bc4438544
+ */.sgQuNaOh5Eu6vnzh3eoh{display:grid}.KJNUWtMTBWtQrmsas64b{display:none}.F3qS5Fne4ECzEWyFeJ5S{background-color:var(--lyrics-color-background);border-radius:8px;overflow:hidden}.F3qS5Fne4ECzEWyFeJ5S .dS_1_x4lBrx_vX9AMg6Q:focus-within,.F3qS5Fne4ECzEWyFeJ5S:hover .dS_1_x4lBrx_vX9AMg6Q{opacity:1}.F3qS5Fne4ECzEWyFeJ5S .dS_1_x4lBrx_vX9AMg6Q{display:-webkit-box;display:-ms-flexbox;display:flex;gap:8px;opacity:0;position:absolute;right:20px;top:16px;-webkit-transition:opacity .2s;transition:opacity .2s;z-index:1}.F3qS5Fne4ECzEWyFeJ5S .mC8gFZzy9ZRO5c61MeuO{height:100%;width:100%}.spotify__container--is-desktop.spotify__os--is-windows .dS_1_x4lBrx_vX9AMg6Q{top:40px}

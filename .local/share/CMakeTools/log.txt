@@ -1,0 +1,70 @@
+2025-07-25T20:09:28.227Z [debug] [main] Safe constructing new CMakeProject instance
+2025-07-25T20:09:28.227Z [debug] [variant] Constructing VariantManager
+2025-07-25T20:09:28.228Z [debug] [main] Constructing new CMakeProject instance
+2025-07-25T20:09:28.228Z [debug] [main] Starting CMake Tools second-phase init
+2025-07-25T20:09:28.228Z [debug] [expand] expanded ${workspaceFolder}
+2025-07-25T20:09:28.230Z [debug] [kit] Reading kits file /home/wel/.local/share/CMakeTools/cmake-tools-kits.json
+2025-07-25T20:09:28.265Z [info] [kit] Successfully loaded 1 kits from /home/wel/.local/share/CMakeTools/cmake-tools-kits.json
+2025-07-25T20:09:28.269Z [debug] [kit] Not reading non-existent kits file: /home/wel/Documentos/Programming/Courses/CS50/.vscode/cmake-kits.json
+2025-07-25T20:09:28.286Z [info] [variant] Loaded new set of variants
+2025-07-25T20:09:28.288Z [debug] [main] CMakeProject instance initialization complete.
+2025-07-25T20:09:28.312Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T20:09:33.184Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T20:09:46.833Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T20:21:49.691Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T20:38:51.185Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T20:39:01.142Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T20:39:14.631Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T20:39:29.812Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T22:18:21.286Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-25T22:18:36.081Z [debug] [extension] Deactivate CMakeTools
+kits in directory undefined\LLVM\bin
+2025-07-16T19:55:29.343Z [debug] [kit] Skipping scan of not existing path undefined\msys64\mingw64\bin
+2025-07-16T19:55:29.343Z [debug] [kit] Found 0 kits in directory undefined\msys64\mingw64\bin
+2025-07-16T19:55:29.343Z [debug] [kit] Skipping scan of not existing path undefined\msys64\mingw32\bin
+2025-07-16T19:55:29.343Z [debug] [kit] Found 0 kits in directory undefined\msys64\mingw32\bin
+2025-07-16T19:55:29.343Z [debug] [kit] Skipping scan of not existing path undefined\msys64\clang32\bin
+2025-07-16T19:55:29.344Z [debug] [kit] Found 0 kits in directory undefined\msys64\clang32\bin
+2025-07-16T19:55:29.344Z [debug] [kit] Skipping scan of not existing path undefined\msys64\clang64\bin
+2025-07-16T19:55:29.344Z [debug] [kit] Found 0 kits in directory undefined\msys64\clang64\bin
+2025-07-16T19:55:29.344Z [debug] [kit] Skipping scan of not existing path undefined\msys64\clangarm64\bin
+2025-07-16T19:55:29.344Z [debug] [kit] Found 0 kits in directory undefined\msys64\clangarm64\bin
+2025-07-16T19:55:29.344Z [debug] [kit] Skipping scan of not existing path undefined\msys64\ucrt64\bin
+2025-07-16T19:55:29.344Z [debug] [kit] Found 0 kits in directory undefined\msys64\ucrt64\bin
+2025-07-16T19:55:29.345Z [debug] [kit] Found 0 kits in directory /usr/local/sbin
+2025-07-16T19:55:29.346Z [debug] [kit] Found 0 kits in directory /usr/local/bin
+2025-07-16T19:55:29.346Z [debug] [kit] Found 0 kits in directory /usr/bin/site_perl
+2025-07-16T19:55:29.346Z [debug] [kit] Found 0 kits in directory /usr/bin/vendor_perl
+2025-07-16T19:55:29.347Z [debug] [kit] Found 0 kits in directory /usr/bin/core_perl
+2025-07-16T19:55:29.358Z [debug] [kit] Testing GCC binary: /usr/bin/gcc
+2025-07-16T19:55:29.358Z [info] [proc] Executing command: /usr/bin/gcc -v
+2025-07-16T19:55:29.392Z [debug] [kit] Testing GCC binary: /usr/bin/x86_64-linux-gnu-gcc
+2025-07-16T19:55:29.393Z [info] [proc] Executing command: /usr/bin/x86_64-linux-gnu-gcc -v
+2025-07-16T19:55:29.401Z [debug] [kit] Testing GCC binary: /usr/bin/x86_64-pc-linux-gnu-gcc
+2025-07-16T19:55:29.401Z [info] [proc] Executing command: /usr/bin/x86_64-pc-linux-gnu-gcc -v
+2025-07-16T19:55:29.409Z [debug] [kit] Testing GCC binary: /usr/bin/x86_64-pc-linux-gnu-gcc-15.1.1
+2025-07-16T19:55:29.410Z [info] [proc] Executing command: /usr/bin/x86_64-pc-linux-gnu-gcc-15.1.1 -v
+2025-07-16T19:55:29.427Z [debug] [kit] Detected GCC compiler: /usr/bin/x86_64-pc-linux-gnu-gcc-15.1.1
+2025-07-16T19:55:29.428Z [debug] [kit] Detected GCC compiler: /usr/bin/x86_64-pc-linux-gnu-gcc
+2025-07-16T19:55:29.429Z [debug] [kit] Detected GCC compiler: /usr/bin/x86_64-linux-gnu-gcc
+2025-07-16T19:55:29.429Z [debug] [kit] Detected GCC compiler: /usr/bin/gcc
+2025-07-16T19:55:29.446Z [debug] [kit] Testing GCC binary: /usr/bin/x86_64-pc-linux-gnu-gcc
+2025-07-16T19:55:29.446Z [info] [proc] Executing command: /usr/bin/x86_64-pc-linux-gnu-gcc -v
+2025-07-16T19:55:29.457Z [debug] [kit] Detected GCC compiler: /usr/bin/x86_64-pc-linux-gnu-gcc
+2025-07-16T19:55:29.457Z [debug] [kit] Found 4 kits in directory /usr/bin
+2025-07-16T19:55:29.457Z [info] [kit] Found Kit (trusted): GCC 15.1.1 x86_64-pc-linux-gnu
+2025-07-16T19:55:29.457Z [info] [kit] Found Kit (trusted): GCC 15.1.1 x86_64-pc-linux-gnu
+2025-07-16T19:55:29.457Z [info] [kit] Found Kit (trusted): GCC 15.1.1 x86_64-pc-linux-gnu
+2025-07-16T19:55:29.457Z [info] [kit] Found Kit (trusted): GCC 15.1.1 x86_64-pc-linux-gnu
+2025-07-16T19:55:29.458Z [debug] [kitsController] Saving kits to /home/wel/.local/share/CMakeTools/cmake-tools-kits.json
+2025-07-16T19:55:29.458Z [debug] [kitsController] Saving new kits to /home/wel/.local/share/CMakeTools/cmake-tools-kits.json
+2025-07-16T19:55:34.223Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T19:56:37.411Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T19:57:19.650Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T19:57:24.651Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T19:57:26.401Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T19:57:36.169Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T19:59:42.319Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T19:59:47.496Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T20:00:11.845Z [debug] [main] Not starting CMake driver: no kit selected
+2025-07-16T20:02:00.929Z [debug] [extension] Deactivate CMakeTools

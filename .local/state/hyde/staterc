@@ -1,0 +1,8 @@
+HYDE_THEME="Wel"
+rofiStyle="style_10"
+HYPR_WORKFLOW="default"
+HYPR_SHADER="disable"
+enableWallDcol="0"
+WAYBAR_LAYOUT_PATH=/home/wel/.config/waybar/layouts/welbar.jsonc
+WAYBAR_LAYOUT_NAME=welbar
+WAYBAR_STYLE_PATH=/home/wel/.local/share/waybar/styles/defaults.css
