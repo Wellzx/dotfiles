@@ -1,9 +1,0 @@
-HYDE_CLONE_PATH='/home/wel/HyDE'
-HYDE_BRANCH='master'
-HYDE_REMOTE='https://github.com/HyDE-Project/HyDE'
-HYDE_VERSION='38e9b99'
-HYDE_VERSION_LAST_CHECKED='2025-07-26 12:5903 -0300'
-HYDE_VERSION_COMMIT_MSG='Fix: https://github.com/HyDE-Project/HyDE/issues/962
-
-Closes #962'
-HYDE_COMMIT_HASH='38e9b9962cf870ea3c6a69b284298e7a86a9e4d5'
