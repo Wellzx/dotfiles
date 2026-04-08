@@ -1,15 +1,14 @@
 * {
+  min-height: 0;
+  min-width: 0;
   font-family: "JetbrainsMono Nerd Font";
-  font-size: 12pt;
+  font-size: 14px;
   font-weight: bold;
-  border-radius: 14px;
-  transition-property: background-color;
-  transition-duration: 0.5s;
 }
 
 @keyframes blink_red {
   to {
-    background-color: #CC6666; 
+    background-color: rgba(204, 102, 102, 0.2);
   }
 }
 
@@ -24,44 +23,49 @@
 }
 
 window#waybar {
-  color: rgb(255,553,254);
-  background-color: transparent;
-
+  background-color: rgba(30, 30, 30, 0.8); 
+  border-radius: 10px;
+  margin: 8px;
+  padding: 4px 8px;
 }
 
-window > box {
-  margin: 5px 5px 5px 5px;
-  background-color: rgba(30, 30, 30, 0.8); 
+window#waybar.empty #window {
+  background-color: rgba(35, 35, 35, 0.8);
 }
 
 #workspaces {
-  padding-left: 0;
-  padding-right: 4px;
+  background-color: rgba(35, 35, 35, 0.8);
+  border-radius: 10px;
+  margin: 4px 8px;
+  padding: 0 4px;
 }
 
 #workspaces button {
-  padding: 5px 10px;
-  border-radius: 12px;
-  color: rgb(255,553,254);
+  padding: 6px 12px;
+  color: #d6d6d6;
+  transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-  background-color: #b5e8e0;
-  color: #1a1816;
+  color: #d6d6d6;
 }
-
 
 #clock,
 #pulseaudio,
 #custom-power,
-#temparature,
+#temperature,
 #cpu,
 #tray,
 #memory,
+#network,
+#mpris,
 #window,
 #mpris {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 10px;
+  background-color: rgba(35, 35, 35, 0.8);
+  color: #d6d6d6
 }
 
 #mpris.playing {
@@ -74,7 +78,7 @@ window > box {
 
 #custom-power {
   font-size: 16px;
-  padding-right: 12px;
+  padding-right: 11px;
 }
 
 tooltip {
@@ -82,5 +86,5 @@ tooltip {
 }
 
 tooltip label {
-  color: #d9e0ee;
+  color: #d6d6d6;
 }

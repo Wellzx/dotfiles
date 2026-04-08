@@ -1,44 +1,21 @@
 {
   "layer": "top",
   "position": "top",
+  "height": 40,
+  "width": 1900,
+  "spacing": 2,
 
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock"],
+  "modules-left": ["clock", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces", "mpris"],
   "modules-right": [
-    "mpris",
     "tray",
     "cpu",
     "temperature",
     "memory",
     "pulseaudio",
+    "network",
     "custom/power"
   ],
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "*": 6
-    }
-  },
-  "hyprland/window": {
-    "format": "{title:.40}"
-  },
-  "tray": {
-    "spacing": 10,
-    "show-passive-items": true
-  },
-  "clock": {
-    "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
-    "format-alt": "󰥔 {:%H:%M}",
-    "tooltip-format": "<span color='#d6d6d6' font='Lexend 20'><tt><small>{calendar}</small></tt></span>",
-    "calendar": {
-      "format": {
-        "today": "<span color='#9a9a9a' weight='700'><u>{}</u></span>",
-        "days": "<span color='#d6d6d6' weight='normal'>{}</span>",
-        "months": "<span color='#d6d6d6'><b>{}</b></span>",
-        "weeks": "<span color='#d6d6d6'><b>W{}</b></span>", 
-        "weekdays": "<span color='#d6d6d6'><b>{}</b></span>"
-      }
-    }
-  },
   "mpris": {
     "player": "spotify",
     "dynamic-order": ["artist", "title"],
@@ -51,12 +28,39 @@
       "default": ""
     }
   },
+  "hyprland/workspaces": {
+    "persistent-workspaces":
+    {
+      "*": 8
+    }
+  },
+  "hyprland/window": {
+    "format": "{title:.40}" 
+  },
+  "tray": {
+    "spacing": 10,
+    "show-passive-items": true
+  },
+  "clock": {
+    "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
+    "format-alt": "󰥔 {:%H:%M}",
+    "tooltip-format": "<span color='#d6d6d6' font='Lexend 20'><tt><small>{calendar}</small></tt></span>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#4a4a4a' weight='700'><u>{}</u></span>",
+        "days": "<span color='#d6d6d6' weight='normal'>{}</span>",
+        "months": "<span color='#d6d6d6'><b>{}</b></span>",
+        "weeks": "<span color='#d6d6d6'><b>W{}</b></span>",
+        "weekdays": "<span color='#d6d6d6'><b>{}</b></span>"
+      }
+    }
+  },
   "network": {
     "format-wifi": "󰖩 {essid} ({signalStrength}%)",
     "format-ethernet": "󰈀 {ifname}",
     "format-linked": "󰈀 {ifname} (No IP)",
     "format-disconnected": "󰖪 Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "format-alt": "󰈀 {ifname}: {ipaddr}/{cidr}",
     "tooltip-format": "{ifname}: {ipaddr}",
     "on-click-right": "kitty -e nmtui"
   },
@@ -66,15 +70,15 @@
     "critical-threshold": 80,
     // "on-click": "wezterm --config-file ~/.config/wezterm/float.lua start --class floatwezterm btm -e --default_widget_type temp",
     "tooltip": true,
-    "format": " {temperatureC}°C",
+    "format": " {temperatureC}°C"
   },
   "cpu": {
     "format": " {usage}%",
     "tooltip": true,
-    "interval": 1,
+    "interval": 1
   },
   "memory": {
-    "format": "󰘚 {}%",
+    "format": " {}%",
     "interval": 1,
     "on-click": "kitty -e btop"
   },
@@ -97,13 +101,21 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""],
+      "default": ["", "", ""]
     },
-    "on-click": "pavucontrol",
+    "on-click": "pavucontrol"
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "spacing": 2,
+    "on-click-middle": "close",
+    "tooltip-format": "{title}",
+    "on-click": "activate"
   },
   "custom/power": {
     "tooltip": false,
     "on-click": "wlogout -p layer-shell &",
-    "format": "",
+    "format": ""
   }
 }

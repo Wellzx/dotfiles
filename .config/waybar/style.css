@@ -1,67 +1,64 @@
 * {
-  font-family: "JetbrainsMono Nerd Font";
-  font-size: 12pt;
+  min-height: 0;
+  min-width: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 15px;
   font-weight: bold;
-  border-radius: 14px;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-}
-
-@keyframes blink_red {
-  to {
-    background-color: #CC6666; 
-  }
-}
-
-.warning,
-.critical,
-.urgent {
-  animation-name: blink_red;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 window#waybar {
-  color: rgb(255,553,254);
+  transition-duration: 0.5s;
   background-color: transparent;
-
 }
 
-window > box {
-  margin: 5px 5px 5px 5px;
-  background-color: rgba(30, 30, 30, 0.8); 
+window#waybar.empty #window {
+  background-color: transparent;
 }
 
 #workspaces {
-  padding-left: 0;
-  padding-right: 4px;
+  padding: 4px;
+  background: rgba(35, 35, 35, 0.8);
+  border-radius: 20px;
+  margin: 5 5px;
 }
 
-#workspaces button {
-  padding: 5px 10px;
+#workspaces button{
+  padding: 0px 7px;
   border-radius: 12px;
-  color: rgb(255,553,254);
+  font-weight: 900;
+  margin: 1 5px;
+  transition: 0.4s;
+  background-color: transparent;
+  color: #d6d6d6;
 }
 
-#workspaces button.active {
-  background-color: #b5e8e0;
+#workspaces button.active{
+  background-color: #d6d6d6;
   color: #1a1816;
+  padding: 0 20px;
 }
 
+#workspaces button.urgent {
+  background-color: rgba(204, 102, 102, 0.2);
+  color: #d6d6d6;
+}
 
 #clock,
 #pulseaudio,
 #custom-power,
-#temparature,
 #cpu,
+#temperature,
+#disk,
+#network,
 #tray,
 #memory,
 #window,
 #mpris {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 10px;
+  background-color: rgba(35, 35, 35, 0.8);
+  color: #d6d6d6
 }
 
 #mpris.playing {
@@ -78,9 +75,9 @@ window > box {
 }
 
 tooltip {
-  background-color: rgba(30, 30, 30, 0.8); 
+  background-color: rgba(35, 35, 35, 0.8);
 }
 
 tooltip label {
-  color: #d9e0ee;
+  color: #d6d6d6;
 }
