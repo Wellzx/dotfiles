@@ -1,39 +1,24 @@
 * {
   min-height: 0;
   min-width: 0;
-  font-family: "Fira Code Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
 }
-
-@keyframes blink_red {
-  to {
-    background-color: #CC6666; 
-    color: #1a1816;
-  }
-}
-
-.warning,
-.critical,
-.urgent {
-  animation-name: blink_red;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
 
 window#waybar {
-  transition-property: background-color;
   transition-duration: 0.5s;
+  background-color: transparent;
+}
+
+window#waybar.empty #window {
   background-color: transparent;
 }
 
 #workspaces {
   padding: 4px;
   background: rgba(35, 35, 35, 0.8);
-  border-radius: 50px;
+  border-radius: 20px;
   margin: 5 5px;
 }
 
@@ -44,37 +29,27 @@ window#waybar {
   margin: 1 5px;
   transition: 0.4s;
   background-color: transparent;
-  color: #ffffff;
+  color: #d6d6d6;
 }
 
 #workspaces button.active{
-  background-color: #c8c8c8;
+  background-color: #d6d6d6;
   color: #1a1816;
   padding: 0 20px;
 }
 
-/* #workspaces button:hover {
-  background: rgba(35, 35, 35, 0.8);
-} */
-
-/* #workspaces button.empty{
-  color: #D6D6D6;
-} */
-
-tooltip {
-  background-color: rgba(30, 30, 30, 0.8); 
-}
-
-tooltip label {
-  color: #d9e0ee;
+#workspaces button.urgent {
+  background-color: rgba(204, 102, 102, 0.2);
+  color: #d6d6d6;
 }
 
 #clock,
 #pulseaudio,
 #custom-power,
-#custom-swaync,
 #cpu,
 #temperature,
+#disk,
+#network,
 /* #tray, */
 #memory,
 #window,
@@ -83,27 +58,26 @@ tooltip label {
   margin: 0.4rem 0.25rem;
   border-radius: 10px;
   background-color: rgba(35, 35, 35, 0.8);
-  color: #ffffff
-}
-
-window#waybar.empty #window {
-  background-color: transparent;
+  color: #d6d6d6
 }
 
 #mpris.playing {
-  color: #7FBF7F;
+  color: #7fbf7f;
 }
 
 #mpris.paused {
-  color: #7F99BF
-}
-
-#custom-sep {
-  padding: 0px;
-  color: #D6D6D6;
+  color: #7f99bf;
 }
 
 #custom-power {
   font-size: 16px;
   padding-right: 12px;
+}
+
+tooltip {
+  background-color: rgba(35, 35, 35, 0.8);
+}
+
+tooltip label {
+  color: #d6d6d6;
 }

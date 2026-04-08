@@ -1,24 +1,19 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-top": 1,
   "height": 40,
   "width": 1900,
   "spacing": 2,
-  "exclusive": true,
-  "gtk-layer-shell": true,
-  "passthrough": false,
-  "fixed-center": true,
-  "modules-left": ["clock#simpleclock", "hyprland/window"],
-  "modules-center": ["hyprland/workspaces"],
+
+  "modules-left": ["clock", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces", "mpris"],
   "modules-right": [
     "tray",
     "cpu",
     "temperature",
     "memory",
     "pulseaudio",
-    "clock",
-    "custom/notification",
+    "network",
     "custom/power"
   ],
   "mpris": {
@@ -33,48 +28,42 @@
       "default": ""
     }
   },
-   "hyprland/workspaces": {
-    "active-only": false,
-    "all-outputs": true,
-    "disable-scroll": false,
-    "on-scroll-up": "hyprctl dispatch workspace -1",
-    "on-scroll-down": "hyprctl dispatch workspace +1",
-    "on-click": "activate",
-    "sort-by-number": true,
+  "hyprland/workspaces": {
     "persistent-workspaces":
     {
-      "*": 7
+      "*": 8
     }
   },
   "hyprland/window": {
     "format": "{title:.40}" 
   },
   "tray": {
-    "show-passive-items": true,
-    "spacing": 10
-  },
-  "clock#simpleclock": {
-    "tooltip": false,
-    "format": " {:%H:%M}"
+    "icon-size": 15,
+    "spacing": 10,
+    "show-passive-items": true
   },
   "clock": {
-    "format": "{:%Y年%m月%d日 %H:%M:%S %A}",
-    "format-alt": " {:L%a %d %b}",
-    "tooltip-format": "<span color='#c0c0c0' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
+    "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
+    "format-alt": "󰥔 {:%H:%M}",
+    "tooltip-format": "<span color='#d6d6d6' font='Lexend 20'><tt><small>{calendar}</small></tt></span>",
     "calendar": {
       "format": {
-        "days": "<span weight='normal'>{}</span>",
-        "months": "<span color='#c0c0c0'><b>{}</b></span>",
-        "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
-        "weekdays": "<span color='#c0c0c0'><b>{}</b></span>",
-        "weeks": "<span color='#c0c0c0'><b>W{}</b></span>",
-      },
-      "mode": "month",
-      "mode-mon-col": 1,
-      "on-scroll": 1,
-    },
-    "tooltip": true,
-    "on-click": "waybar-msg cmd toggle-alt",
+        "today": "<span color='#4a4a4a' weight='700'><u>{}</u></span>",
+        "days": "<span color='#d6d6d6' weight='normal'>{}</span>",
+        "months": "<span color='#d6d6d6'><b>{}</b></span>",
+        "weeks": "<span color='#d6d6d6'><b>W{}</b></span>",
+        "weekdays": "<span color='#d6d6d6'><b>{}</b></span>"
+      }
+    }
+  },
+  "network": {
+    "format-wifi": "󰖩 {essid} ({signalStrength}%)",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰖪 Disconnected",
+    "format-alt": "󰈀 {ifname}: {ipaddr}/{cidr}",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "on-click-right": "kitty -e nmtui"
   },
   "temperature": {
     "interval": 1,
@@ -82,7 +71,7 @@
     "critical-threshold": 80,
     // "on-click": "wezterm --config-file ~/.config/wezterm/float.lua start --class floatwezterm btm -e --default_widget_type temp",
     "tooltip": true,
-    "format": " {temperatureC}°C",
+    "format": " {temperatureC}°C"
   },
   "cpu": {
     "format": " {usage}%",
@@ -90,54 +79,44 @@
     "interval": 1
   },
   "memory": {
-    "format": " {used:0.1f}Gi"
+    "format": " {}%",
+    "interval": 1,
+    "on-click": "kitty -e btop"
   },
-   "pulseaudio": {
-      "format": "{icon} {volume}%",
-      "format-bluetooth": "{icon} {volume}% {format_source}",
-      "format-bluetooth-muted": " {format_source}",
-      "format-muted": "  {format_source}",
-      "format-source": " {volume}%",
-      "format-source-muted": " ",
-      "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "🎧",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", "", ""]
-      },
-      "on-click": "pavucontrol"
+  "disk": {
+    "interval": 30,
+    "format": "󰋊 {percentage_used}%",
+    "path": "/"
   },
-  "custom/sep": {
-    "format": "|",
-    "tooltip": false
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": " {format_source}",
+    "format-muted": "  {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "🎧",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "spacing": 2,
+    "on-click-middle": "close",
+    "tooltip-format": "{title}",
+    "on-click": "activate"
   },
   "custom/power": {
     "tooltip": false,
     "on-click": "wlogout -p layer-shell &",
     "format": ""
-  },
-  "custom/swaync": {
-	"tooltip": true,
-	"tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
-	"format": "{} {icon} ",
-	"format-icons": {
-		"notification": "<span foreground='red'><sup></sup></span>",
-		"none": "",
-		"dnd-notification": "<span foreground='red'><sup></sup></span>",
-		"dnd-none": "",
-		"inhibited-notification": "<span foreground='red'><sup></sup></span>",
-		"inhibited-none": "",
-		"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-		"dnd-inhibited-none": ""
-	},
-	"return-type": "json",
-	"exec-if": "which swaync-client",
-	"exec": "swaync-client -swb",
-	"on-click": "sleep 0.1 && swaync-client -t -sw",
-	"on-click-right": "swaync-client -d -sw",
-	"escape": true,
-  },
+  }
 }

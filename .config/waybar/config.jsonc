@@ -11,58 +11,54 @@
     "temperature",
     "memory",
     "pulseaudio",
-    "custom/notification",
-    "custom/power",
+    "custom/power"
   ],
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 6
+    }
+  },
+  "hyprland/window": {
+    "format": "{title:.40}"
+  },
+  "tray": {
+    "spacing": 10,
+    "show-passive-items": true
+  },
+  "clock": {
+    "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
+    "format-alt": "󰥔 {:%H:%M}",
+    "tooltip-format": "<span color='#d6d6d6' font='Lexend 20'><tt><small>{calendar}</small></tt></span>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#9a9a9a' weight='700'><u>{}</u></span>",
+        "days": "<span color='#d6d6d6' weight='normal'>{}</span>",
+        "months": "<span color='#d6d6d6'><b>{}</b></span>",
+        "weeks": "<span color='#d6d6d6'><b>W{}</b></span>", 
+        "weekdays": "<span color='#d6d6d6'><b>{}</b></span>"
+      }
+    }
+  },
   "mpris": {
     "player": "spotify",
     "dynamic-order": ["artist", "title"],
     "format": "{player_icon} {dynamic}",
     "format-paused": "{status_icon} <i>{dynamic}</i>",
     "status-icons": {
-      "paused": "",
+      "paused": ""
     },
     "player-icons": {
-      "default": "",
-    },
+      "default": ""
+    }
   },
-  "hyprland/workspaces": {
-    "active-only": false,
-    "all-outputs": true,
-    "disable-scroll": false,
-    "on-scroll-up": "hyprctl dispatch workspace -1",
-    "on-scroll-down": "hyprctl dispatch workspace +1",
-    "on-click": "activate",
-    "sort-by-number": true,
-    "persistent-workspaces": {
-      "*": 7,
-    },
-  },
-  "hyprland/window": {
-    "format": "{title:.40}",
-  },
-  "tray": {
-    "show-passive-items": true,
-    "spacing": 10,
-  },
-  "clock": {
-    "format": "{:%Y年%m月%d日 %H:%M:%S %A}",
-    "format-alt": " {:L%a %d %b}",
-    "tooltip-format": "<span color='#c0c0c0' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
-    "calendar": {
-      "format": {
-        "days": "<span weight='normal'>{}</span>",
-        "months": "<span color='#c0c0c0'><b>{}</b></span>",
-        "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
-        "weekdays": "<span color='#c0c0c0'><b>{}</b></span>",
-        "weeks": "<span color='#c0c0c0'><b>W{}</b></span>",
-      },
-      "mode": "month",
-      "mode-mon-col": 1,
-      "on-scroll": 1,
-    },
-    "tooltip": true,
-    "on-click": "waybar-msg cmd toggle-alt",
+  "network": {
+    "format-wifi": "󰖩 {essid} ({signalStrength}%)",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰖪 Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "on-click-right": "kitty -e nmtui"
   },
   "temperature": {
     "interval": 1,
@@ -78,7 +74,14 @@
     "interval": 1,
   },
   "memory": {
-    "format": " {used:0.1f}Gi",
+    "format": "󰘚 {}%",
+    "interval": 1,
+    "on-click": "kitty -e btop"
+  },
+  "disk": {
+    "interval": 30,
+    "format": "󰋊 {percentage_used}%",
+    "path": "/"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -98,34 +101,9 @@
     },
     "on-click": "pavucontrol",
   },
-  "custom/sep": {
-    "format": "|",
-    "tooltip": false,
-  },
   "custom/power": {
     "tooltip": false,
     "on-click": "wlogout -p layer-shell &",
     "format": "",
-  },
-  "custom/swaync": {
-    "tooltip": true,
-    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
-    "format": "{} {icon} ",
-    "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": "",
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "sleep 0.1 && swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true,
-  },
+  }
 }
