@@ -1,9 +1,9 @@
 * {
-    background:       rgba(35, 35, 35, 0.6);
-    background-alt:   rgba(255, 255 , 255, 0.2);
-    foreground:       #FFFFFFFF;
-    selected:         #FFFFFF50;
-    active:           #98C379FF;
-    urgent:           #E06C75FF;
-    text-color:       #1E1E1E;
+    background:     rgba(30, 30, 30, 0.6);     
+    background-alt: rgba(255, 255, 255, 0.2); 
+    foreground:     rgba(214, 214, 214, 0.9);   
+    selected:       rgba(34, 34, 34, 0.5);     
+    active:         rgba(127, 191, 127, 0.9);   
+    urgent:         rgba(204, 102, 102, 0.9);   
+    text-color:     rgba(214, 214, 214, 0.9);   
 }
