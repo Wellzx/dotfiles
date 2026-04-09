@@ -9,6 +9,10 @@ window#waybar {
   color: #d6d6d6;
 }
 
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
 #workspaces button {
   padding: 0 5px;
   margin: 0.3rem 0.25rem;
@@ -17,8 +21,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: transparent;
-  color: #cfcf8a;
+  background-color: rgba(35, 35, 35, 0.3);
 }
 
 #workspaces button.urgent {

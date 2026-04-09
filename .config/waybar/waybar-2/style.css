@@ -11,10 +11,6 @@ window#waybar {
   background-color: transparent;
 }
 
-window#waybar.empty #window {
-  background-color: transparent;
-}
-
 #workspaces {
   padding: 4px;
   background: rgba(35, 35, 35, 0.8);

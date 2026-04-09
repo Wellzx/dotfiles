@@ -29,13 +29,66 @@
     }
   },
   "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "󰮯",
+      "default": "󰊠"
+    },
     "persistent-workspaces":
     {
       "*": 8
     }
   },
   "hyprland/window": {
-    "format": "{title:.40}" 
+    "format": "{}",
+    "separate-outputs": true,
+    "rewrite": {
+      // Empty Desktop
+      "^$": "<span foreground='#89b4fa'> </span>Hyprland",
+
+      // Development - Editors (High Priority)
+      "(.*)nvim": "<span foreground='#a6e3a1'> </span>Neovim",
+      "nvim (.*)": "<span foreground='#a6e3a1'> </span>$1",
+      "(.*)vim": "<span foreground='#a6e3a1'> </span>Vim",
+      "(.*) - Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span>$1",
+      "Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span>VS Code",
+
+      // Shell & Terminal Emulators
+      "(.*)linux(.*)": "<span foreground='#a6e3a1'> </span>Terminal",
+      "kitty": "<span foreground='#a6e3a1'> </span>Terminal",
+      "alacritty": "<span foreground='#a6e3a1'> </span>Terminal",
+      "(.*)zsh": "<span foreground='#a6e3a1'> </span>Terminal",
+      "tmux(.*)": "<span foreground='#a6e3a1'> </span>Tmux",
+
+      // Web Browsers
+      "(.*) — Mozilla Firefox": "<span foreground='#f38ba8'>󰈹 </span>$1",
+      "(.*) — Zen Browser": "<span foreground='#fab387'>󰺕 </span>$1",
+      "Zen Browser": "<span foreground='#fab387'>󰺕 </span>Zen Browser",
+
+      // Productivity & Planning
+      "(.*)Obsidian(.*)": "<span foreground='#cba6f7'>󰠮 </span>Obsidian",
+      "OBS(.*)": "<span foreground='#a6adc8'> </span>OBS Studio",
+
+      // Communication & Media
+      "(.*)Discord(.*)": "<span foreground='#89b4fa'> </span>Discord",
+      "(.*)Spotify(.*)": "<span foreground='#a6e3a1'> </span>Spotify",
+      "(.*)mpv": "<span foreground='#cba6f7'> </span>$1",
+
+      // File Management & Graphics
+      "(.*)Thunar": "<span foreground='#89b4fa'>󰉋 </span>Thunar",
+      "(.*)Loupe": "<span foreground='#fab387'> </span>Loupe",
+      "(.*)Image Viewer": "<span foreground='#fab387'> </span>Loupe",
+
+      // Office Documents & PDF
+      "(.*)\\.pdf": "<span foreground='#f38ba8'> </span>$1",
+      "(.*)\\.docx": "<span foreground='#89b4fa'> </span>$1",
+      "(.*)\\.xlsx": "<span foreground='#a6e3a1'> </span>$1",
+      "(.*)\\.pptx": "<span foreground='#fab387'> </span>$1",
+
+      // Image File Extensions
+      "(.*)\\.(jpg|png|svg)": "<span foreground='#fab387'> </span>$1.$2"
+    }
   },
   "tray": {
     "spacing": 10,
