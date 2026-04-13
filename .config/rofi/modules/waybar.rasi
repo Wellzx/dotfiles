@@ -129,8 +129,8 @@ element normal.active {
 }
 
 element selected.normal {
-    background-color:           @background-alt;
-    text-color:                 @selected;
+    background-color:           @background;
+    text-color:                 @text-color;
     border-radius:              10px;
 }
 
