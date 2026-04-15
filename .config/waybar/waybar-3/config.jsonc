@@ -43,7 +43,7 @@
       "Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span>VS Code",
 
       // Shell & Terminal Emulators
-      "(.*)linux(.*)": "<span foreground='#a6e3a1'> </span>Terminal",
+      "(.*)linux(.*)": "<span foreground='#a6e3a1'> </span>$1",
       "kitty": "<span foreground='#a6e3a1'> </span>Terminal",
       "alacritty": "<span foreground='#a6e3a1'> </span>Terminal",
       "(.*)zsh": "<span foreground='#a6e3a1'> </span>Terminal",
@@ -91,7 +91,7 @@
         "today": "<span color='#9a9a9a' weight='700'><u>{}</u></span>",
         "days": "<span color='#d6d6d6' weight='normal'>{}</span>",
         "months": "<span color='#d6d6d6'><b>{}</b></span>",
-        "weeks": "<span color='#d6d6d6'><b>W{}</b></span>", 
+        "weeks": "<span color='#d6d6d6'><b>W{}</b></span>",
         "weekdays": "<span color='#d6d6d6'><b>{}</b></span>"
       }
     }
