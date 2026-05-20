@@ -1,37 +1,27 @@
 * {
-  min-height: 0;
-  min-width: 0;
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 15px;
-  font-weight: bold;
+  border-radius: 0;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 16px;
 }
 
 window#waybar {
-  transition-duration: 0.5s;
-  background-color: transparent;
-}
-
-#workspaces {
-  padding: 4px;
-  background: rgba(35, 35, 35, 0.8);
-  border-radius: 20px;
-  margin: 5 5px;
-}
-
-#workspaces button{
-  padding: 0px 7px;
-  border-radius: 12px;
-  font-weight: 900;
-  margin: 1 5px;
-  transition: 0.4s;
-  background-color: transparent;
+  background-color: rgba(30, 30, 30, 0.75);
   color: #d6d6d6;
 }
 
-#workspaces button.active{
-  background-color: #d6d6d6;
-  color: #1a1816;
-  padding: 0 20px;
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  margin: 0.3rem 0.25rem;
+  border-radius: 4px;
+  color: #d6d6d6;
+}
+
+#workspaces button.active {
+  background-color: rgba(35, 35, 35, 0.3);
 }
 
 #workspaces button.urgent {
@@ -39,22 +29,24 @@ window#waybar {
   color: #d6d6d6;
 }
 
+#workspaces button:hover {
+  background-color: rgba(35, 35, 35, 0.45);
+  color: #d6d6d6;
+}
+
 #clock,
 #pulseaudio,
-#custom-power,
 #cpu,
-#temperature,
 #disk,
-#network,
+#temperature,
 #tray,
 #memory,
+#wlr-taskbar,
 #window,
 #mpris {
-  padding: 0.3rem 0.6rem;
-  margin: 0.4rem 0.25rem;
-  border-radius: 10px;
-  background-color: rgba(35, 35, 35, 0.8);
-  color: #d6d6d6
+  padding: 0.3rem 0.5rem;
+  margin: 0.2rem 0.2rem;
+  background-color: transparent;
 }
 
 #mpris.playing {
@@ -62,16 +54,17 @@ window#waybar {
 }
 
 #mpris.paused {
-  color: #7f99bf;
+  color: #7f99bf
 }
 
 #custom-power {
-  font-size: 16px;
-  padding-right: 12px;
+  font-size: 20px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
 tooltip {
-  background-color: rgba(35, 35, 35, 0.8);
+  background-color: rgba(30, 30, 30, 0.8); 
 }
 
 tooltip label {

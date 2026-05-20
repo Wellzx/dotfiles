@@ -121,8 +121,10 @@ alias ls='lsd'
 alias la='lsd -la'
 alias ll='lsd -lh'
 
+alias steam='SDL_VIDEODRIVER=wayland,x11 steam'
+
 # Run pokémon script
-pokemon-colorscripts -r 1,2,3,4,5,6 --no-title 
+# pokemon-colorscripts -r --no-title
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
