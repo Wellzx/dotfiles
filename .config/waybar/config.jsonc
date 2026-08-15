@@ -1,85 +1,21 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 30,
+  "height": 40,
+  "width": 1900,
   "spacing": 2,
 
-  "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
-  ],
-  "modules-center": [
-    "clock",
-    "mpris"
-  ],
+  "modules-left": ["clock", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces", "mpris"],
   "modules-right": [
     "tray",
-    "temperature",
     "cpu",
+    "temperature",
     "memory",
     "pulseaudio",
     "network",
     "custom/power"
   ],
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "*": 6
-    }
-  },
-  "hyprland/window": {
-    "format": "{}",
-    "max-length": 40
-  },
-  "tray": {
-    "spacing": 10,
-    "show-passive-items": true
-  },
-  "clock": {
-    "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
-    "format-alt": "󰥔 {:%H:%M}",
-    "tooltip-format": "<span color='#e0e0e0' font='Lexend 20'><tt><small>{calendar}</small></tt></span>",
-    "calendar": {
-      "format": {
-        "today": "<span color='#4a4a4a' weight='700'><u>{}</u></span>",
-        "days": "<span color='#d6d6d6' weight='normal'>{}</span>",
-        "months": "<span color='#d6d6d6'><b>{}</b></span>",
-        "weeks": "<span color='#d6d6d6'><b>W{}</b></span>",
-        "weekdays": "<span color='#d6d6d6'><b>{}</b></span>"
-      }
-    }
-  },
-  "disk": {
-    "interval": 30,
-    "format": "󰋊 {percentage_used}%",
-    "path": "/"
-  },
-  "temperature": {
-    "interval": 1,
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    "critical-threshold": 80,
-    // "on-click": "wezterm --config-file ~/.config/wezterm/float.lua start --class floatwezterm btm -e --default_widget_type temp",
-    "tooltip": true,
-    "format": " {temperatureC}°C"
-  },
-  "network": {
-    "format-wifi": "󰖩 {essid} ({signalStrength}%)",
-    "format-ethernet": " 󰈀 {ifname}",
-    "format-linked": "󰈀 {ifname} (No IP)",
-    "format-disconnected": "󰖪 Disconnected",
-    "format-alt": "󰈀 {ifname}: {ipaddr}/{cidr}",
-    "tooltip-format": "{ifname}: {ipaddr}",
-    "on-click-right": "kitty -e nmtui"
-  },
-  "cpu": {
-    "format": " {usage}%",
-    "tooltip": true,
-    "interval": 1
-  },
-  "memory": {
-    "format": " {}%",
-    "interval": 1,
-    "on-click": "kitty -e btop"
-  },
   "mpris": {
     "player": "spotify",
     "dynamic-order": ["artist", "title"],
@@ -91,6 +27,118 @@
     "player-icons": {
       "default": ""
     }
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "󰮯",
+      "default": "󰊠"
+    },
+    "persistent-workspaces":
+    {
+      "*": 8
+    }
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "separate-outputs": true,
+    "rewrite": {
+      // Empty Desktop
+      "^$": "<span foreground='#89b4fa'> </span>Hyprland",
+
+      // Development - Editors (High Priority)
+      "(.*)nvim": "<span foreground='#a6e3a1'> </span>Neovim",
+      "nvim (.*)": "<span foreground='#a6e3a1'> </span>$1",
+      "(.*)vim": "<span foreground='#a6e3a1'> </span>Vim",
+      "(.*) - Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span>$1",
+      "Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span>VS Code",
+
+      // Shell & Terminal Emulators
+      "(.*)linux(.*)": "<span foreground='#a6e3a1'> </span>$1",
+      "kitty": "<span foreground='#a6e3a1'> </span>Terminal",
+      "alacritty": "<span foreground='#a6e3a1'> </span>Terminal",
+      "(.*)zsh": "<span foreground='#a6e3a1'> </span>Terminal",
+      "tmux(.*)": "<span foreground='#a6e3a1'> </span>Tmux",
+
+      // Web Browsers
+      "(.*) — Mozilla Firefox": "<span foreground='#f38ba8'>󰈹 </span>$1",
+      "(.*) — Zen Browser": "<span foreground='#fab387'>󰺕 </span>$1",
+      "Zen Browser": "<span foreground='#fab387'>󰺕 </span>Zen Browser",
+
+      // Productivity & Planning
+      "(.*)Obsidian(.*)": "<span foreground='#cba6f7'>󰠮 </span>Obsidian",
+      "OBS(.*)": "<span foreground='#a6adc8'> </span>OBS Studio",
+
+      // Communication & Media
+      "(.*)Discord(.*)": "<span foreground='#89b4fa'> </span>Discord",
+      "(.*)Spotify(.*)": "<span foreground='#a6e3a1'> </span>Spotify",
+      "(.*)mpv": "<span foreground='#cba6f7'> </span>$1",
+
+      // File Management & Graphics
+      "(.*)Thunar": "<span foreground='#89b4fa'>󰉋 </span>Thunar",
+      "(.*)Loupe": "<span foreground='#fab387'> </span>Loupe",
+      "(.*)Image Viewer": "<span foreground='#fab387'> </span>Loupe",
+
+      // Office Documents & PDF
+      "(.*)\\.pdf": "<span foreground='#f38ba8'> </span>$1",
+      "(.*)\\.docx": "<span foreground='#89b4fa'> </span>$1",
+      "(.*)\\.xlsx": "<span foreground='#a6e3a1'> </span>$1",
+      "(.*)\\.pptx": "<span foreground='#fab387'> </span>$1",
+
+      // Image File Extensions
+      "(.*)\\.(jpg|png|svg)": "<span foreground='#fab387'> </span>$1.$2"
+    }
+  },
+  "tray": {
+    "spacing": 10,
+    "show-passive-items": true
+  },
+  "clock": {
+    "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
+    "format-alt": "󰥔 {:%H:%M}",
+    "tooltip-format": "<span color='#d6d6d6' font='Lexend 20'><tt><small>{calendar}</small></tt></span>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#4a4a4a' weight='700'><u>{}</u></span>",
+        "days": "<span color='#d6d6d6' weight='normal'>{}</span>",
+        "months": "<span color='#d6d6d6'><b>{}</b></span>",
+        "weeks": "<span color='#d6d6d6'><b>W{}</b></span>",
+        "weekdays": "<span color='#d6d6d6'><b>{}</b></span>"
+      }
+    }
+  },
+  "network": {
+    "format-wifi": "󰖩 {essid} ({signalStrength}%)",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰖪 Disconnected",
+    "format-alt": "󰈀 {ifname}: {ipaddr}/{cidr}",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "on-click-right": "kitty -e nmtui"
+  },
+  "temperature": {
+    "interval": 1,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    // "on-click": "wezterm --config-file ~/.config/wezterm/float.lua start --class floatwezterm btm -e --default_widget_type temp",
+    "tooltip": true,
+    "format": " {temperatureC}°C"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 1
+  },
+  "memory": {
+    "format": " {}%",
+    "interval": 1,
+    "on-click": "kitty -e btop"
+  },
+  "disk": {
+    "interval": 30,
+    "format": "󰋊 {percentage_used}%",
+    "path": "/"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -110,11 +158,6 @@
     },
     "on-click": "pavucontrol"
   },
-  "custom/power": {
-    "tooltip": true,
-    "on-click": "wlogout -p layer-shell &",
-    "format": "󰐥"
-  },
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 20,
@@ -122,5 +165,10 @@
     "on-click-middle": "close",
     "tooltip-format": "{title}",
     "on-click": "activate"
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell &",
+    "format": ""
   }
 }
