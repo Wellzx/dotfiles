@@ -1,14 +1,14 @@
 window {
   font-family: "JetBrains Mono Nerd Font";
-  font-size: 18pt;
+  font-size: 14pt;
   color: #d6d6d6;
-  background-color: rgba(35, 35, 35, 0.8);
+  background-color: rgba(35, 35, 35, 0.5);
 }
 
 button {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30%;
+  background-size: 25%;
   background-color: transparent;
 
   border: none;
@@ -36,9 +36,8 @@ button:checked {
 button:hover {
   background-color: transparent;
   color: transparent;
-  background-size: 60%;
-  margin: 5px;
-  border-radius: 80px;
+  background-size: 40%;
+  margin: 4px
 }
 
 button span {

@@ -1,53 +1,60 @@
 * {
-  min-height: 0;
-  min-width: 0;
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 15px;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 14px;
   font-weight: bold;
 }
 
+@keyframes blink_red {
+  to {
+    background-color: rgba(204, 102, 102, 0.2);
+  }
+}
+
+.warning,
+.critical,
+.urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 window#waybar {
-  transition-duration: 0.5s;
-  background-color: transparent;
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 10px;
+}
+
+window#waybar.empty #window {
+  background-color: rgba(35, 35, 35, 0.8);
 }
 
 #workspaces {
-  padding: 4px;
-  background: rgba(35, 35, 35, 0.8);
-  border-radius: 20px;
-  margin: 5 5px;
+  background-color: rgba(35, 35, 35, 0.8);
+  border-radius: 10px;
+  margin: 4px 8px;
+  padding: 0 4px;
 }
 
-#workspaces button{
-  padding: 0px 7px;
-  border-radius: 12px;
-  font-weight: 900;
-  margin: 1 5px;
-  transition: 0.4s;
-  background-color: transparent;
+#workspaces button {
+  padding: 4px 6px;
   color: #d6d6d6;
+  transition: all 0.3s ease;
 }
 
-#workspaces button.active{
-  background-color: #d6d6d6;
-  color: #1a1816;
-  padding: 0 20px;
-}
-
-#workspaces button.urgent {
-  background-color: rgba(204, 102, 102, 0.2);
+#workspaces button.active {
   color: #d6d6d6;
 }
 
 #clock,
 #pulseaudio,
 #custom-power,
-#cpu,
 #temperature,
-#disk,
-#network,
+#cpu,
 #tray,
 #memory,
+#network,
+#mpris,
 #window,
 #mpris {
   padding: 0.3rem 0.6rem;
@@ -67,11 +74,11 @@ window#waybar {
 
 #custom-power {
   font-size: 16px;
-  padding-right: 12px;
+  padding-right: 11px;
 }
 
 tooltip {
-  background-color: rgba(35, 35, 35, 0.8);
+  background-color: rgba(30, 30, 30, 0.8);
 }
 
 tooltip label {
